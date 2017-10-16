@@ -10,7 +10,7 @@ public class test2 {
         String fileName = "C:\\Users\\Administrator\\Desktop\\test.txt";
         String line = "";
         String str = "";
-        try
+        try//GITHUB修改处3
         {
             BufferedReader in = new BufferedReader(new FileReader(fileName));
             line = in.readLine();
@@ -26,6 +26,7 @@ public class test2 {
             System.out.println(TxtString);        //输出过滤后的字符串
         }catch (IOException e)
         {
+			//GITHUB修改处2
             e.printStackTrace();
         }
         String[] arrA = TxtString.toLowerCase().split("\\s+"); //字符串写入数组，按空格分割,并大写转小写
@@ -81,6 +82,6 @@ public class test2 {
         }
 
 
-
+//GITHUB修改处1
     }
 }
