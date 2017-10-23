@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-
 public class test2 {
     public static void main(String[] args)
     {
@@ -17,8 +16,6 @@ public class test2 {
             while (line != null)
             {
                 str += line;
-                //System.out.println(line);
-                //System.out.println(TxtString);
                 line = in.readLine();
             }
             in.close();
@@ -31,7 +28,6 @@ public class test2 {
         }
         String[] arrA = TxtString.toLowerCase().split("\\s+"); //字符串写入数组，按空格分割,并大写转小写
         System.out.println(Arrays.toString(arrA));  //输出数组
-
         int t = 0;
         String[] tempArray = new String[arrA.length];
         for (int i=0; i<arrA.length; i++) {
@@ -50,14 +46,11 @@ public class test2 {
         String[] arrB = new String[t];
         System.arraycopy(tempArray,0,arrB,0,t);
         System.out.println(Arrays.toString(arrB));
-
-
         //邻接矩阵构建有向图
         int Graph[][] = new int[arrB.length][arrB.length];
         for (int i=0; i<arrA.length-1; i++) {
             int j=0;
             int m=0;
-
             for (j=0; j<arrB.length; j++) {
                 if (arrA[i].equals(arrB[j]))
                     break;
@@ -66,9 +59,6 @@ public class test2 {
                 if (arrA[i+1].equals(arrB[m]))
                     break;
             }
-
-            //j = getPosition(arrB, arrA[i]);
-            //m = getPosition(arrB, arrA[i+1]);
             if (Graph[j][m]==0)
                 Graph[j][m]=1;
             else
@@ -80,8 +70,6 @@ public class test2 {
             }
             System.out.printf("\n");
         }
-
-
 //GITHUB修改处1
     }
 }
